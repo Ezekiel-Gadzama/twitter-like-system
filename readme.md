@@ -75,10 +75,10 @@ Handles liking posts. Registered users can like messages, and the like count is 
   - `username` (string): The username of the poster.
   - `content` (string): The content of the message (max 400 characters).
 
-**Example:**
-```bash
-curl -X POST http://localhost:8080/TwitterLikeSystem/messages/post -d "username=JohnDoe&content=Hello World"
-
+  **Example:**
+  ```bash
+  curl -X POST http://localhost:8080/TwitterLikeSystem/messages/post -d "username=JohnDoe&content=Hello World"
+  
 
 # TwitterLikeSystem API
 
@@ -89,9 +89,8 @@ curl -X POST http://localhost:8080/TwitterLikeSystem/messages/post -d "username=
 
 ### Example:
 
-```bash
-curl -X GET http://localhost:8080/TwitterLikeSystem/messages/feed
-
+    ```bash
+    curl -X GET http://localhost:8080/TwitterLikeSystem/messages/feed
 
 # Like Service
 
@@ -104,8 +103,8 @@ curl -X GET http://localhost:8080/TwitterLikeSystem/messages/feed
 
 ### Example:
 
-```bash
-curl -X POST http://localhost:8080/TwitterLikeSystem/likes/like -d "username=JohnDoe&messageId=1"
+    ```bash
+    curl -X POST http://localhost:8080/TwitterLikeSystem/likes/like -d "username=JohnDoe&messageId=1"
 
 # How to Run the Project
 
@@ -113,31 +112,29 @@ curl -X POST http://localhost:8080/TwitterLikeSystem/likes/like -d "username=Joh
 
 Clone the project repository from the provided URL:
 
-```bash
-git clone <https://github.com/Ezekiel-Gadzama/twitter-like-system.git>
-cd TwitterLikeSystem
+    ```bash
+    git clone <https://github.com/Ezekiel-Gadzama/twitter-like-system.git>
+    cd TwitterLikeSystem
 
 ## Build the Project
 
 Use Maven to build the project:
 
-```bash
-mvn clean install
+    ```bash
+    mvn clean install
 
 ## Run the Application
 
 Deploy the WAR file on an Apache Tomcat server (version 10.1.26 is recommended). Start the server:
 
-```bash
-<tomcat-directory>/bin/startup.sh
+    ```bash
+    <tomcat-directory>/bin/startup.sh
 
 
 ## Access the Application
 
 The application should be running at:  
 [http://localhost:8080/TwitterLikeSystem](http://localhost:8080/TwitterLikeSystem).
-
-
 
 
 ## Testing the Endpoints
@@ -172,15 +169,18 @@ The application should be running at:
 ### Using curl
 Refer to the API Endpoints section above for example curl commands.
 
-```bash
-#### Register a User
-curl -X POST http://localhost:8080/TwitterLikeSystem/users/register -d "username=JohnDoe"
+  #### Register a User
+    ```bash
+    curl -X POST http://localhost:8080/TwitterLikeSystem/users/register -d "username=JohnDoe"
 
 #### Post a Message
-curl -X POST http://localhost:8080/TwitterLikeSystem/messages/post -d "username=JohnDoe&content=Hello World"
+    ```bash
+    curl -X POST http://localhost:8080/TwitterLikeSystem/messages/post -d "username=JohnDoe&content=Hello World"
 
 #### View the Feed
-curl -X GET http://localhost:8080/TwitterLikeSystem/messages/feed
+    ```bash
+    curl -X GET http://localhost:8080/TwitterLikeSystem/messages/feed
 
 #### Like a Message
-curl -X POST http://localhost:8080/TwitterLikeSystem/likes/like -d "username=JohnDoe&messageId=1"
+    ```bash
+    curl -X POST http://localhost:8080/TwitterLikeSystem/likes/like -d "username=JohnDoe&messageId=1"
